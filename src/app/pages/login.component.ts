@@ -9,6 +9,6 @@ export class LoginComponent {
   constructor(private router:Router) { }
 
   onRegisterClick(){
-    this.router.navigate(['dashboard'])
+    this.router.navigate(['../pages/register'])
   }
 }

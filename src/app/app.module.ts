@@ -15,6 +15,10 @@ import { BreadcrumbsComponent } from './shared/breadcrumb.component';
 // Routing Module
 import { AppRoutingModule } from './app.routing';
 
+//gaurds
+import { AuthGuard } from './_guard/auth.guard';
+import { AdminGuard } from './_guard/admin.guard';  
+
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
@@ -36,7 +40,8 @@ import { SimpleLayoutComponent } from './layouts/simple-layout.component';
     SIDEBAR_TOGGLE_DIRECTIVES,
     AsideToggleDirective,
   ],
-  providers: [{
+  providers: [AuthGuard
+    , AdminGuard,{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],
