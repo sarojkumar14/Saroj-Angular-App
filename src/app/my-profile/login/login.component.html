@@ -1,0 +1,30 @@
+<div class="custom-form  text-center">
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.valid,loginForm.value)" novalidate autocomplete="off" class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
+
+    <div class="login-input-space-bottom">
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="text" (ngModel)="username" #username="ngModel" name="username" id="username" class="form-control" placeholder="username"
+        required autofocus>
+      <div *ngIf="username.errors?.required && username.touched" class="alert alert-danger">
+        Username is required
+      </div>
+    </div>
+    <div class="login-input-space-bottom">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input #password="ngModel" (ngModel)="password" type="password" name="password" id="inputPassword" class="form-control" placeholder="password"
+        required>
+      <div *ngIf="password.errors?.required && password.touched" class="alert alert-danger">
+        Password is required
+      </div>
+    </div>
+    <button [disabled]="!loginForm.valid" class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+    <input type="button" class="btn btn-lg btn-block" [routerLink]="['./register']" value="Sign Up" />
+    <div class="login-font">Forgot
+      <a routerLink="forgotpassword">Username or Password?</a>
+    </div>
+    <div class="login-font">By signing in, you agree to our
+      <a>Terms of Use.</a>
+    </div>
+  </form>
+</div>

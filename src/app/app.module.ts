@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';  
+
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -23,10 +27,31 @@ import { AdminGuard } from './_guard/admin.guard';
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 
+//_services
+import {
+  AuthService
+  , LibraryService
+  , FileService
+  , ElasticService
+  , NotificationService
+  , CollectionService
+  , DataService
+  , HistoryService
+  , PlaylistService
+  , WatchLaterService
+  , SettingsService
+  , CommentService
+} from '../app/_services/index';
+
+
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
     AppRoutingModule,
+    HttpClientModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule
@@ -41,7 +66,19 @@ import { SimpleLayoutComponent } from './layouts/simple-layout.component';
     AsideToggleDirective,
   ],
   providers: [AuthGuard
-    , AdminGuard,{
+    , AdminGuard,
+    AuthService
+    , LibraryService
+    , FileService
+    , ElasticService
+    , NotificationService
+    , CollectionService
+    , DataService
+    , HistoryService
+    , PlaylistService
+    , WatchLaterService
+    , SettingsService
+    , CommentService,{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],

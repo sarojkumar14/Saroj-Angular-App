@@ -10,3 +10,6 @@ export * from './playlist';
 export * from './later';
 export * from './settings';
 export * from './comment';
+export * from './login';
+export * from './register';
+export * from './Serverresponse';
