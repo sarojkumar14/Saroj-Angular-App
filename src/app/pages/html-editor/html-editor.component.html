@@ -1,0 +1,16 @@
+<div style="padding:40px">
+  <div [froalaEditor]="editorOptions" [(froalaModel)]="editorContent">Hello, Froala!</div>
+  <br>
+  <br>
+  <hr>
+  <h1>Preview</h1>
+  <div [froalaView]="editorContent"></div>
+
+  <br>
+  <br>
+  <hr>
+  <h1>Html code</h1>
+  <br>
+  {{editorContent}}
+</div>
+

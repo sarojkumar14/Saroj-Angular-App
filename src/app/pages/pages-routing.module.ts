@@ -5,6 +5,8 @@ import { P404Component } from './404.component';
 import { P500Component } from './500.component';
 import { LoginComponent } from './login.component';
 import { RegisterComponent } from './register.component';
+import { GooglemapComponent } from './googlemap/googlemap.component';
+import { HtmlEditorComponent } from './html-editor/html-editor.component';
 
 const routes: Routes = [
   {
@@ -39,6 +41,20 @@ const routes: Routes = [
         component: RegisterComponent,
         data: {
           title: 'Register Page'
+        }
+      },
+      {
+        path: 'map',
+        component: GooglemapComponent,
+        data: {
+          title: 'map Page'
+        }
+      },
+      {
+        path: 'htmleditor',
+        component: HtmlEditorComponent,
+        data: {
+          title: 'Html Editor'
         }
       }
     ]

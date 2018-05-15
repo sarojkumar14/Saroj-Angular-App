@@ -11,4 +11,7 @@ export class LoginComponent {
   onRegisterClick(){
     this.router.navigate(['../pages/register'])
   }
+  login(){
+    this.router.navigate(['../dashboard'])
+  }
 }
