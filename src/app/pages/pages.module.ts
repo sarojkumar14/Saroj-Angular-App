@@ -17,6 +17,7 @@ import { RegisterComponent } from './register.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { GooglemapComponent } from './googlemap/googlemap.component';
 import { HtmlEditorComponent } from './html-editor/html-editor.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
 
 @NgModule({
   imports: [ PagesRoutingModule,FormsModule,CommonModule,AgmCoreModule.forRoot({
@@ -29,7 +30,8 @@ import { HtmlEditorComponent } from './html-editor/html-editor.component';
     LoginComponent,
     RegisterComponent,
     GooglemapComponent,
-    HtmlEditorComponent
+    HtmlEditorComponent,
+    FileuploadComponent
   ]
 })
 export class PagesModule { }

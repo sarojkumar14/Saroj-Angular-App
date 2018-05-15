@@ -7,6 +7,7 @@ import { LoginComponent } from './login.component';
 import { RegisterComponent } from './register.component';
 import { GooglemapComponent } from './googlemap/googlemap.component';
 import { HtmlEditorComponent } from './html-editor/html-editor.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
 
 const routes: Routes = [
   {
@@ -55,6 +56,13 @@ const routes: Routes = [
         component: HtmlEditorComponent,
         data: {
           title: 'Html Editor'
+        }
+      },
+      {
+        path: 'fileupload',
+        component: FileuploadComponent,
+        data: {
+          title: 'File upload'
         }
       }
     ]
