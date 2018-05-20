@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { CommonConstants } from "../_helpers/index";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { History } from "../_models";
-import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable()
 
